@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>图森免费导航</title>
+    <meta name="keywords"  content="图森导航" />
+    <meta name="description" content="图森导航">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="css/pure-min.css" rel="stylesheet">
+<link href="css/iconfont.css" rel="stylesheet">
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" href="css/grids-responsive-min.css">
+<!--<![endif]-->
+<link href="css/web.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<script src="js/html5.min.js"></script>
+<![endif]-->
+<link href="css/idangerous.swiper.css" rel="stylesheet">
+</head>
+<body>
+<div class="top" style="background-color:#000">
+    <a class="logo" href="#">
+        <img src="picture/logo3.jpg"><b>图森导航</b>
+    </a>
+    <div class="menusmall">
+        <a id="menu" href="#"><i class="icon iconfont icon-iconfontgengduo"></i></a>
+        <a id="menu-close" href="#"><i class="icon iconfont icon-close"></i></a>
+    </div>  
+    <div class="topnav menubig">
+        <a href="#" data-id="0" class="active">精彩视频</a>
+        <a href="#" data-id="1" >漫画小说</a>
+        <a href="#" data-id="2" >磁力搜索</a>
+        <a href="#" data-id="3" >APP</a>
+    </div>
+</div>
+
+<div class="x_container">
+    <div class="x_left-nav">
+        <ul id="left-menu">
+        </ul>
+    </div>
+    <div class="x_main">
+        <div id="mb"></div>
+        <div class="scroll-wrapper"> 
+            <iframe id="engine" name="engine" frameborder="0" marginwidth="0" scrolling="yes" marginheight="0" allowtransparency="true" style="background-color:#fff" src="https://www.2345.com/"></iframe>
+        </div>
+   </div>
+   <div class="footer">
+            版权所有 &copy图森导航
+  </div>
+</div>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/idangerous.swiper.min.js"></script>
+<script src="js/idangerous.swiper.progress.min.js"></script>
+<script src="js/jquery.leanmodal.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/web.js"></script>
+<div style="display:none;"><script type="text/javascript" src="js/z_stat.js"></script></div><script type="text/javascript">
+$(function () {
+    var window_w = $(window).width();
+    var currtype = 1;
+
+    var menuList = [
+        [
+            {
+                "title": "番号鸽",
+                "url": "http://www.javdove.club/"
+            },
+            {
+                "title": "974视频",
+                "url": "http://www.974ch.com/"
+            },
+            {
+                "title": "啪客吧",
+                "url": "http://kkkka.xyz/"
+            },
+            {
+                "title": "色姑娘",
+                "url": "http://www.he200.com/"
+            },
+            {
+                "title": "91色色色",
+                "url": "http://91sss.xyz/"
+            },
+            {
+                "title": "不停插",
+                "url": "http://butingcha.xyz/"
+            },
+            {
+                "title": "色狼屋",
+                "url": "http://www.selangw.xyz/"
+            },
+        ],
+        [
+            {
+                "title": "风流小说网",
+                "url": "http://m.bhrrr.com/hxiaoshuo/"
+            },
+            {
+                "title": "x书库",
+                "url": "http://www.hhlav.xyz/"
+            },
+            {
+                "title": "有声有色",
+                "url": "http://www.dadiav5.com/"
+            },
+            {
+                "title": "漫画小说",
+                "url": "http://www.jiujiure3.xyz/"
+            },
+            {
+                "title": "邪恶漫画",
+                "url": "http://www.9898dh.xyz/"
+            },
+        ],
+        [
+            {
+                "title": "磁力管家",
+                "url": "http://tiger001.xyz/"
+            },
+        ]
+    ];
+
+
+    $('#menu').click(function(){
+        $('.menubig').show();
+        $('#menu').hide();
+        $('#menu-close').show();
+    });
+
+    $('#menu-close').click(function(){
+        $('.menubig').hide();
+        $('#menu').show();
+        $('#menu-close').hide();
+    });
+
+    $('.menubig a').click(function () {
+        $(this).parent().children('a').removeClass('active');
+        $(this).addClass('active');
+        index = $(this).data('id')
+        list = menuList[index]
+        console.log(index)
+        console.log(list)
+        html = ''
+        for (i = 0; i < list.length; i++) {
+            html += '<li class="item" rel="2"><img src="picture/favicon.ico" /><a href="javascript:;" data="'+ list[i].url +'">'+ list[i].title +'</a></li>';
+        }
+        $("#left-menu").html(html)
+        search_right_navigation(currtype,window_w);
+    });
+
+    $('.menubig a').eq(0).click();
+
+	search_right_navigation(currtype,window_w);
+
+    // $('.item').click(function(){
+	// 	var id = $(this).attr('rel');
+	// 	$.get('http://hao.xsldh.com/analysis/search_view_plus',{id:id});
+	// });
+
+});
+</script>
+</body>
+</html>
