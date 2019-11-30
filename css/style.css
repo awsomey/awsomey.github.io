@@ -1,0 +1,25 @@
+.hideConBox{
+	border:1px dashed #fff;
+	background:#fff url("/images/locked.gif") no-repeat 9px 12px;
+	padding: 5px 0 5px 25px;
+	margin:5px auto;
+	color:#666;
+	line-height:26px;
+}
+
+.hideConBox img{
+	vertical-align: middle;
+	margin:0 5px;
+	border:none;
+}
+
+.loginview-box2{background:url(/bjimg/bc.jpg) no-repeat 0 0;background-size: cover;padding: 20px 20%;text-align: center;color: #fff;font-size:20px;margin-bottom:10px;}
+.loginview-box2 i{display: block;margin-bottom: 10px;}
+.loginview-box2 p{text-shadow:1px 1px 1px #666}
+.loginview-box2 p>a{display: inline-block;line-height: 50px;padding: 0 30px;text-shadow:none;background-color: #11b2e6;color: #fff;border-radius: 4px;margin: 0 6px;}
+.loginview-box2 p>a:last-child{background-color: #ff6990;}
+
+@media screen and (max-width: 720px){
+    .loginview-box2{padding: 12px;font-size:16px;}
+    .loginview-box2 i img{width:20%;height: auto;}
+}/* i i s7. co m */
